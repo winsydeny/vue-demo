@@ -22,3 +22,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ```
 在原本的vue-cli当中进行开发
+    + 第一个vue 
+    + 第一个vue项目
