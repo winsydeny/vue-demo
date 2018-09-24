@@ -1,16 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import HomeContainer from '../components/tabbar/HomeContainer'
 import MemberContainer from '../components/tabbar/MemberContainer'
 import ShoppingContainer from '../components/tabbar/ShoppingContainer'
 import SearchContainer from '../components/tabbar/SearchContainer'
-
+import newsinfo from '../components/news/Newsinfo'
+import NewsList from '../components/news/NewsList'
+import photolist from '../components/lives/photolist'
+// import pic from '../components/photo/hot'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [ //配置路由规则
+  routes: [ //配置路由规则   
+    // 通过路由重定向，让首页显示home页面
+    {
+      path:'/',
+      redirect:'/home'
+    },
     {
       path:'/home',
       component:HomeContainer
@@ -27,6 +34,22 @@ export default new Router({
       path:'/search',
       component:SearchContainer
     },
+    {
+      path:'/home/newslist',
+      component:NewsList
+    },
+    {
+      path:'/home/newslist/newsinfo',
+      component:newsinfo
+    },
+    {
+      path:'/home/lives',
+      component:photolist
+    },
+    // {
+    //   path:'home/photolist/item2',
+    //   component:pic
+    // }
   ],
   linkActiveClass:'mui-active' //覆盖默认路由高亮的类，默认的类为 link-active-aclass  
 })
