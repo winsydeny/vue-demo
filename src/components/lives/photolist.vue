@@ -33,26 +33,8 @@
     </div>
 </template>
 <script>
-    import Vue from 'vue'
-    import Router from 'vue-router'
-    import pic from './hot'
-    import recommend from './recommend'
-    Vue.use(Router)
-   let router =  new Router({
-        routes:[
-            {
-                path:'/home/lives/item2',
-                component:pic
-            },
-            {
-                path:'/home/lives/item1',
-                component:recommend
-            }
-        ]
-    })
     export default{
-        name:'photo',
-        router,        
+        name:'photo',      
     }
 </script>
 <style>

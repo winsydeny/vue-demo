@@ -7,7 +7,8 @@ import SearchContainer from '../components/tabbar/SearchContainer'
 import newsinfo from '../components/news/Newsinfo'
 import NewsList from '../components/news/NewsList'
 import photolist from '../components/lives/photolist'
-// import pic from '../components/photo/hot'
+import pic from '../components/lives/hot'
+import recommend from '../components/lives/recommend'
 
 Vue.use(Router)
 
@@ -44,7 +45,20 @@ export default new Router({
     },
     {
       path:'/home/lives',
-      component:photolist
+      component:photolist,
+      children:[
+        {
+          path:'/home/lives',
+          redirect:'/home/lives/item1'
+        },
+        {
+          path:'/home/lives/item1',
+          component:recommend
+        },{
+          path:'/home/lives/item2',
+          component:pic
+        }
+      ]
     },
     // {
     //   path:'home/photolist/item2',
