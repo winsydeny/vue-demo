@@ -9,6 +9,10 @@ import NewsList from '../components/news/NewsList'
 import photolist from '../components/lives/photolist'
 import pic from '../components/lives/hot'
 import recommend from '../components/lives/recommend'
+import game from '../components/lives/game'
+import music from '../components/lives/music'
+import physical from '../components/lives/physical'
+
 
 Vue.use(Router)
 
@@ -40,7 +44,7 @@ export default new Router({
       component:NewsList
     },
     {
-      path:'/home/newslist/newsinfo',
+      path:'/home/newslist/newsinfo/:aid',
       component:newsinfo
     },
     {
@@ -57,6 +61,17 @@ export default new Router({
         },{
           path:'/home/lives/item2',
           component:pic
+        },{
+          path:'/home/lives/item3',
+          component:game
+        },
+        {
+          path:'/home/lives/item4',
+          component:music
+        },
+        {
+          path:'/home/lives/item5',
+          component:physical
         }
       ]
     },

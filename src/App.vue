@@ -40,12 +40,13 @@ export default {
       display:true
     }
   },
+  components:{ scroll },
   methods:{
             getNews(){
-                this.$http.jsonp('http://api.avatardata.cn/ActNews/Query?key=fc68d6e5d8844d3089a4c8559e48cdc6&keyword=奥巴马',{jsonp:'_callback'})  
-                .then(result => {
-                    console.log(result);                    
-                })
+                  // this.$http.jsonp('http://api.avatardata.cn/ActNews/Query?key=fc68d6e5d8844d3089a4c8559e48cdc6&keyword=奥巴马',{jsonp:'_callback'})  
+                  // .then(result => {
+                  //     console.log(result);                    
+                  // })
             }
           },
             created() {
@@ -60,7 +61,7 @@ export default {
     padding: 0;margin: 0;
   }
   #app{
-    padding: 40px 0; 
+    /* padding: 40px 0;  */
     overflow-x: hidden;
   }
 
@@ -76,6 +77,6 @@ export default {
   }
   .v-enter-active,
   .v-leave-active{
-      transition: all 0.5s ease;
+      transition: all 0.2s ease;
   }
 </style>
